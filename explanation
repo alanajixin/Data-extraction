@@ -1,0 +1,45 @@
+
+To accomplish tasks such as data extraction, sentiment analysis (positive score, negative score...), and other related tasks, I used
+libraries such as
+
+1. Requests: To make HTTP requests for fetching data from URLs.
+                pip install requests
+
+2.Beautiful Soup: For parsing HTML and XML documents.
+                pip install beautifulsoup4
+
+3.NLTK: Natural Language Toolkit for text processing and analysis tasks like tokenization, stemming, etc.
+                pip install nltk
+
+4.Pandas: For data manipulation and analysis.
+                pip install pandas
+
+5.Numpy: For numerical computing.
+                pip install numpy
+
+6.Regex: For regular expressions, if needed for text processing.
+                pip install regex
+
+To include these libraries in my Python script I use import statements. 
+import requests
+from bs4 import BeautifulSoup
+import nltk
+import pandas as pd
+import numpy as np
+import re
+
+
+To approach data extraction from URLs and perform analysis, I approach these steps:
+1.Data Extraction:
+Use the requests library to fetch the HTML content of the web page from the given URL.Utilize Beautiful Soup to parse the HTML content and extract relevant information, such as  text and titleIdentify the specific HTML tags or classes containing the desired information, and use Beautiful Soup's methods 'find_all' to extract the data..
+
+2.Text Preprocessing:
+Clean the extracted text by removing HTML tags, special characters, punctuation, etc.Remove stop words that in stopword folder to filter out common words that don't contribute much to the analysis.
+
+3.Sentiment Analysis:
+Utilize dictionaries of positive and negative words to assign sentiment scores to each word in the text.Calculate the positive score by counting the occurrences of positive words and negative score by counting negative words.Compute polarity score using the formula: (Positive Score - Negative Score) / (Total Score).Determine the subjectivity score, possibly by considering the ratio of positive/negative words to the total number of words.
+
+4.Statistical Analysis:
+Calculate various statistical measures such as average sentence length, average word length, fog index, etc., based on the extracted text.Perform readability analysis using Gunning Fox index formula .
+
+After performing all operation I create a datframe containg all details includong positive score, negative score .. and store it as output.csv file
